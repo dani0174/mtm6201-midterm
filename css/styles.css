@@ -91,6 +91,9 @@ table {
 /* ********************************************************* */
 /* *************** Mobile Styling Begins Here ************** */
 
+body {
+	background-color: #F0C987;
+}
 
 header, footer {
 	background-color: #36013F;
@@ -103,20 +106,26 @@ a {
 
 i, blockquote {
 	color: #FFF;
+	
+}
+
+#white {
+	color: #FFF;
 }
 
 blockquote {
-	font-family: BubblegumSans-Regular;
+	font-family: 'Bubblegum Sans';
+	width: 90%;
 }
 
 h2 {
-	font-family: Montserrat-Regular;
-	font-size: 30px;
+	font-family: 'Montserrat';
+	font-size: 20px;
 }
 
 h3 {
-	font-family: Montserrat-Regular;
-	font-size: 30px;
+	font-family: 'Montserrat';
+	font-size: 20px;
 	color: #FFF;
 }
 
@@ -126,6 +135,7 @@ h3 {
 	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
+	flex-direction: column;
   }
   
   .main-nav ul li {
@@ -136,23 +146,26 @@ h3 {
   .main-nav ul li a {
 	display: block;
 	color: #32CD32;
-	font-family: ArimaMadurai-Regular;
-	font-size: 16px;
+	font-family: 'Arima Madurai';
+	font-size: 14px;
 	padding-top: 5px;
 	padding-bottom: 5px;
   }
 
   .footer-container {
 	  display: flex;
-	  justify-content: space-between;
+	  justify-content: space-evenly;
 	  align-items: center;
+	  text-align: center;
+	  align-content: center;
+	  flex-direction: column;
   }
 
   .footer-container ul li a {
 	display: block;
 	color: #FFF;
-	font-family: IBMPlexSans-Regular;
-	font-size: 16px;
+	font-family: 'IBM Plex Sans';
+	font-size: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
   }
@@ -164,15 +177,16 @@ h3 {
 
   #subscribe {
 	  color: #FFF;
-	  font-family: IBM Plex Sans;
+	  font-family: 'IBM Plex Sans';
 	  font-weight: bold;
-	  font-size: 14px;
+	  font-size: 10px;
   }
 
   #email {
 	  background-color: #36013F;
 	  color: #FFF;
 	  border-color: #FFF;
+	  font-size: 10px;
   }
 
   #location-info {
@@ -199,26 +213,121 @@ h3 {
 
   .welcome-content-container {
 	background-color: #32CD32;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	align-self: center;
+	height: 300px;
   }
 
   .weekly-flavour-one-container{
 	color: #32CD32;
 	background-color: #137547;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 300px;
   }
 
   .weekly-flavour-two-container {
 	color: #32CD32;
 	background-color: #36013F;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 300px;
+	
   }
 
   .weekly-flavour-three-container {
 	color: #F0C987;
 	background-color: #054A29;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 300px;
   }
 
-  main {
+  .welcome-page-container {
 	  background-color: #F0C987;
+	  display: flex;
+	  flex-direction: column;
   }
+
+  address {
+	  font-size: 10px;
+  }
+
+  .footer-font, .logo-copyright, .newsletter-subscription {
+	padding-top: 5px;
+	padding-bottom: 5px;
+  }
+
+  .animation-logo {
+	  /* Animation element - logo */
+  		animation-name: rotate;
+  		transition: width 2s, height 2s, transform 2s;
+  		transform: scale(1.0) rotate(0deg);
+  		animation-duration: 0.5s;
+  		animation-delay: 0s;
+  		pointer-events: auto;
+  }
+
+  .animation-logo:hover {
+		transform: scale(2.0);
+  		transition: 0.5s;
+	}
+
+  .animation-logo:active {
+		transform-origin: top right;
+		transform: rotate(180deg) translate(-30px) rotate(180deg) rotateY(180deg) scale(0.25);
+		opacity: 0;
+		transition: 1s;
+}
+
+a:hover, button:hover {
+	background-color: #137547;
+	border: 1px solid #32CD32;
+  }
+
+  a:hover, button:hover .animation-logo {
+		animation-name: rotate;
+  		transition: width 2s, height 2s, transform 2s;
+  		transform: scale(1.0) rotate(0deg);
+  		animation-duration: 0.5s;
+  		animation-delay: 0s;
+  		pointer-events: auto;
+  }
+  
+  
+  /* selected link */
+  a:active, button:active {
+	color:  white;
+	background-color: #054A29;
+  }
+  
+  /* selected link */
+  .main-nav li:active {
+	color:  white;
+	background-color: #054A29;
+  }
+
+  @keyframes rotate {
+	from {
+	  transform: rotateY(0deg);
+	}
+  
+	to {
+	  transform: rotateY(360deg);
+	}
+  }
+
+ 
 
 /* *************** Mobile Styling Ends Here *************** */
 /* ******************************************************** */
@@ -230,18 +339,24 @@ h3 {
 /* ********************************************************** */
 /* *************** Tablet Styling Begins Here *************** */
 
-/* =============== Common Elements Styling Begins Here - Tablet =============== */
+@media screen and (min-width: 600px) {
 
-@media screen and (min-width: 760px) {
-
-	.container, .welcome-page-container {
-		width: 760px;
+	.welcome-page-container {
+		width: 600px;
 		margin: 0 auto;
 	}
 
-	.welcome-content-container, .weekly-flavour-one-container {
+	header, footer {
 		width: 100%;
-		margin: 0 auto;
+	}
+
+	.main-nav ul {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.footer-container {
+		flex-direction: row;
 	}
 
 } /* Tablet media screen bracket ends here */
@@ -256,17 +371,18 @@ h3 {
 /* ********************************************************** */
 /* *************** Desktop Styling Begins Here *************** */
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
 
-	.container, .welcome-page-container {
-		width: 1024px;
+	.welcome-page-container {
+		width: 992px;
 		margin: 0 auto;
 	}
 
-	.welcome-content-container, .weekly-flavour-one-container {
-		width: 100%;
-		margin: 0 auto;
+	.welcome-page-container {
+		display: flex;
+		flex-direction: row;
 	}
+
 
 } /* Desktop media screen bracket ends here */
 
@@ -280,17 +396,17 @@ h3 {
 /* ******************************************************************** */
 /* *************** Extended Desktop Styling Begins Here *************** */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1920px) {
 
-	.container, .welcome-page-container {
+	.welcome-page-container {
 		width: 1920px;
 		margin: 0 auto;
 	}
 
-	.welcome-content-container, .weekly-flavour-one-container {
-		width: 100%;
-		margin: 0 auto;
+	header, footer {
+		width: 1920px;
 	}
+
 } /* Extended Desktop media screen bracket ends here */
 
 

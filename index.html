@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>  
 
     <!-- Inserting my own individual Font Awesome kit's code here -->
-    <script src="https://kit.fontawesome.com/c5a45a40e3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6f25edf4fd.js" crossorigin="anonymous"></script>
     
     <link href="css/styles.css" rel="stylesheet">
 
@@ -20,7 +20,8 @@
 
  
   <body> 
-  
+    <div class="wrap">
+
     <ul class="skip-links">
       <li><a href="#main-nav">Skip to Main Navigation</a></li>
       <li><a href="#welcome-content">Skip to Welcome to Flavours Content</a></li>
@@ -38,14 +39,14 @@
         <!-- Top Navigation Content -->
         <nav class="main-nav" role="navigation" id="main-nav">
           <ul role="menubar">
-            <li><a role="menuitem" href="#top" aria-label="Home Nav Button" aria-current="true" class="active">HOME</a></li>
+            <li><a role="menuitem" href="#top" aria-label="Home Nav Button" aria-current="true" class="is-active">HOME</a></li>
             <li><a role="menuitem" href="#top" aria-label="Our Flavours Nav Button">OUR FLAVOURS</a></li>
             <li><a role="menuitem" href="#top" aria-label="About Us Nav Button">ABOUT US</a></li>
             <li><a role="menuitem" href="#top" aria-label="Order Online Nav Button">ORDER ONLINE</a></li>
             <li><a role="menuitem" href="#top" aria-label="Catering FAQ Nav Button">CATERING FAQ</a></li>
             <li><a role="menuitem" href="#top" aria-label="Contact Us Nav Button">CONTACT US</a></li>
             <li><a role="menuitem" href="#top" aria-label="Mood and Ice Cream Pairing Guide Nav Button">MOOD AND ICE CREAM PAIRING GUIDE</a></li>
-            <li><a role="menuitem" href="#top" aria-label="Language Switch to French Nav Button">FR</a></li>
+            <li><a role="menuitem" href="#top" aria-label="Language Switch to French Nav Button" id="white">FR</a></li>
             <li><a role="menuitem" href="#top" aria-label="Search Icon Nav Button"><i class="far fa-search"></i></a></li>
             <li><a role="menuitem" href="#top" aria-label="Map Info Nav Button"><i class="far fa-map-marker-alt"></i></a></li>
             <li><a role="menuitem" href="#top" aria-label="Shopping Cart Icon Nav Button"><i class="far fa-shopping-cart"></i></a></li>
@@ -61,7 +62,7 @@
 
               <div class="welcome-content-container">
 
-                  <img src="images/Flavours_Logo.svg" alt="Flavours Ice Cream Company Logo" width="150" height="150">
+                  <img src="images/Flavours_Logo.svg" alt="Flavours Ice Cream Company Logo" width="150" height="150" class="animation-logo">
                   <p><blockquote>&quot;A flavour for every mood... Offering delicious ice cream to match your family members' varying moods and unique personalities.&quot;</blockquote></p> 
 
               </div>  <!--  Closing of welcome-content container  -->
@@ -99,7 +100,7 @@
         <div class="footer-container">
 
             <div class="logo-copyright">
-                <img src="images/Flavours_Logo.svg" alt="Flavours Ice Cream Company Logo" width="44" height="44">
+                <img src="images/Flavours_Logo.svg" alt="Flavours Ice Cream Company Logo" width="44" height="44" class="animation-logo">
                 <p><a id="screenplay" href="www.screenplaydesigns.com">&copy; Screenplaydesigns 2021</a></p> 
             </div> <!--  Closing of logo-copyright container  -->
 
@@ -145,6 +146,8 @@
     </footer>
 
     </div> <!--  Note: Closing DIV from top of body, "container" section  -->
+
+  </div> <!--  Note: Closing DIV from top of body, "wrap" section  -->
   </body>
 
 </html>
