@@ -95,6 +95,34 @@ body {
 	background-color: #F0C987;
 }
 
+img {
+	width: 100%;
+}
+
+.image-credit-wrapper {
+	overflow: hidden;
+	position: relative;
+}
+	
+.image-credit-wrapper .image-credit {
+	position: absolute;
+	right: 0px;
+	bottom: 4px;
+}
+	
+.image-credit {
+	background: rgba(0,0,0,.7);
+	color: #ccc;
+	display: inline-block;
+	font-size: 11px;
+	font-family: helvetica;
+	font-weight: 300;
+	padding: 5px 8px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
 header, footer {
 	background-color: #36013F;
 	margin: 0 auto;
@@ -102,6 +130,10 @@ header, footer {
 
 a {
     text-decoration: none;
+}
+
+.welcome-page-container a {
+	color: #FFF;
 }
 
 i, blockquote {
@@ -279,7 +311,7 @@ h3 {
   }
 
   .animation-logo:hover {
-		transform: scale(2.0);
+		transform: scale(1.5);
   		transition: 0.5s;
 	}
 
