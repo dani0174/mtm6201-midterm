@@ -166,14 +166,14 @@ blockquote {
 
 h2 {
 	font-family: 'Montserrat';
-	font-size: 16px;
+	font-size: 20px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
 h3 {
 	font-family: 'Montserrat';
-	font-size: 16px;
+	font-size: 20px;
 	color: #FFF;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -517,13 +517,29 @@ a:hover, button:hover {
 
 @media screen and (min-width: 1920px) {
 
-	.welcome-page-container {
+	.welcome-page-container, .contact-us-container, .about-us-container {
 		width: 1920px;
 		margin: 0 auto;
 	}
 
+	.contact-us-container, .about-us-container {
+		width: 100%;
+	}
+	
 	header, footer {
 		width: 1920px;
+	}
+
+	.picture-one {
+		width: 150px;
+	}
+
+	.picture-two {
+		width: 300px;
+	}
+
+	.picture-three {
+		width: 300px;
 	}
 
 } /* Extended Desktop media screen bracket ends here */
@@ -531,6 +547,152 @@ a:hover, button:hover {
 
 /* ******************************************************************** */
 /* **************** Extended Desktop Styling Ends Here **************** */
+
+
+/* CSS code related to contact_us.html - start */
+
+.contact-us-container form input,
+form textarea {
+  	display: block;
+  	width: 90%;
+  	margin-bottom: 1rem;
+  	padding: .5rem 1rem;
+  	color: #FFF;
+	font-family: 'IBM Plex Sans';
+}
+
+.contact-us-container form textarea {
+  	min-height: 100px;
+  	max-height: 100px;
+  	height: 100px;
+  	resize: none;
+  	color: #FFF;
+	font-family: 'IBM Plex Sans';
+}
+
+.contact-us-container form button {
+  	background: none;
+  	background-color: #137547;
+  	border: 3px solid black;
+  	padding: 1rem;
+  	text-transform: uppercase;
+  	color: #FFF;
+	font-family: 'IBM Plex Sans';
+}
+
+.contact-us-container form {
+	border-style: solid;
+  	border-width: 1px;
+  	border-color: black;
+	margin: 5px;
+	padding: 10px;
+	padding-top: 15px;
+	color: #FFF;
+	font-family: 'IBM Plex Sans';
+ }
+
+ .form-flexbox{
+	display: flex;
+	justify-content: space-evenly;
+  }
+  
+  .owner {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+  }
+  
+  .owner h4 {
+	align-self: flex-start;
+  }
+  
+  .google-maps-element {
+	padding-left: 5%;
+  }
+  
+  .owner-contact-items a {
+	color: #FFF;
+  }
+
+  .main-content-contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	color: #FFF;
+	font-family: 'IBM Plex Sans';
+	line-height: 150%;
+  }
+  
+  .main-content-contact h2, p {
+	padding: 5px;
+	align-self: center;
+	justify-self: center;
+	color: #FFF;
+	font-family: 'IBM Plex Sans';
+	line-height: 150%;
+  }
+
+
+@media screen and (min-width: 835px) {
+  .grid-container {
+    display: grid;
+    width: 100%;
+    align-self: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1em;
+  }
+}
+
+  h4 {
+	font-family: 'Bubblegum Sans';
+	font-size: 24px;
+	color: #F0C987;
+	padding-top: 20px;
+	padding-bottom: 20px;
+  }
+
+  .grid-container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 1rem;
+	background-color:#32CD32;
+  }
+
+  .contact-us-container address {
+	font-size: 14px;
+	line-height: 150%;
+}
+
+.contact-section {
+	color: #FFF;
+	font-family: 'IBM Plex Sans';
+	line-height: 150%;
+}
+/* CSS code related to contact_us.html - end */
+
+
+/* CSS code related to about_us.html - start */
+
+.about-us-content {
+	text-align: center;
+	padding: 40px;
+	background-color: #054A29;
+}
+
+.about-us-content p {
+	font-family: 'Shadows Into Light';
+	line-height: 200%;
+	color: #FFF;
+	font-size: 20px;
+}
+
+#welcome-pad {
+	padding: 20px;
+}
+/* CSS code related to about_us.html - end */
+
 
 
 /*  Comments... I love comments!  LOL  }:-)  */
